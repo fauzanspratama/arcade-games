@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+::selection {
+  color: #fff;
+  background: #BAE4B4;
+}
+
+body {
+  background: #BAE4B4;
+}
+
+.select-box,
+.play-board,
+.result-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+.select-box {
+  background: white;
+  padding: 20px 25px 25px;
+  border-radius: 20px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 8px 24px 72px 0px rgba(3, 70, 66, 0.3);
+}
+
+.select-box.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.select-box header {
+  font-size: 32px;
+  font-weight: 800;
+  color: #034642;
+  padding-bottom: 10px;
+  border-bottom: 2px solid lightgray;
+}
+
+.select-box .title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #034642;
+  margin: 20px 0;
+}
+
+.select-box .options {
+  display: flex;
+  width: 100%;
+}
+
+.options button {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 10px 0;
+  border: none;
+  background: #A3CF9C;
+  border-radius: 12px;
+  color: #034642;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.options button:hover,
+.btn button:hover {
+  transform: scale(0.96);
+}
+
+.options button.playerX {
+  margin-right: 5px;
+}
+
+.options button.playerO {
+  margin-left: 5px;
+}
+
+.play-board {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.play-board.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+  display: inline-block;
+  margin: 0 auto;
+  background: #D2EDCE;
+  padding: 24px;
+  border-radius: 28px;
+  box-shadow: 8px 24px 72px 0px rgba(3, 70, 66, 0.3);
+}
+
+.play-board .details {
+  padding: 12px;
+  border-radius: 16px;
+  background: white;
+}
+
+.play-board .players {
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+
+.players span {
+  position: relative;
+  z-index: 2;
+  color: #A3CF9C;
+  font-size: 20px;
+  font-weight: 800;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  cursor: default;
+  user-select: none;
+  transition: all 0.3 ease;
+}
+
+.players.active span:first-child {
+  color: #fff;
+}
+
+.players.active span:last-child {
+  color: #A3CF9C;
+}
+
+.players span:first-child {
+  color: #034642;
+}
+
+.players .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #A3CF9C;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.players.active .slider {
+  left: 50%;
+}
+
+.players.active span:first-child {
+  color: #A3CF9C;
+}
+
+.players.active span:nth-child(2) {
+  color: #064746;
+}
+
+.players.active .slider {
+  left: 50%;
+}
+
+.play-area {
+  margin-top: 20px;
+}
+
+.play-area section {
+  display: flex;
+  margin-bottom: 1px;
+}
+
+.play-area section span {
+  display: block;
+  height: 90px;
+  width: 90px;
+  margin: 3px;
+  color: #034642;
+  font-size: 40px;
+  line-height: 95px;
+  text-align: center;
+  border-radius: 12px;
+  background: white;
+}
+
+.result-box {
+  padding: 25px 20px;
+  border-radius: 20px;
+  max-width: 320px;
+  width: 100%;
+  opacity: 0;
+  text-align: center;
+  background: white;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.9);
+  box-shadow: 8px 24px 72px 0px rgba(3, 70, 66, 0.3);
+}
+
+.result-box.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.result-box .won-text {
+  font-size: 32px;
+  font-weight: 800;
+  color: #034642;
+  display: flex;
+  justify-content: center;
+}
+
+.result-box .won-text p {
+  font-weight: 800;
+  margin: 0 5px;
+}
+
+.result-box .btn {
+  width: 100%;
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn button {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 8px 20px;
+  border: none;
+  background: #A3CF9C;
+  border-radius: 10px;
+  color: #034642;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.back-button button {
+  margin: 32px;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+.back-button button:hover {
+  transform: scale(0.96);
+}

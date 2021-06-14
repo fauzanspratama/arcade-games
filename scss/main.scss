@@ -1,0 +1,239 @@
+// colors & variables
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
+@import './variables';
+
+$theme-colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'dark': $dark,
+);
+
+// bootstrap required
+@import './bootstrap/functions';
+@import './bootstrap/variables';
+@import './bootstrap/mixins';
+
+// bootstrap optional
+@import './bootstrap/root';
+@import './bootstrap/reboot';
+@import './bootstrap/utilities';
+@import './bootstrap/mixins';
+@import './bootstrap/nav';
+@import './bootstrap/navbar';
+@import './bootstrap/transitions';
+@import './bootstrap/type';
+@import './bootstrap/card';
+@import './bootstrap/images';
+@import './bootstrap/jumbotron';
+@import './bootstrap/buttons';
+@import './bootstrap/grid';
+
+// @import "./bootstrap/bootstrap.scss";
+
+// Custom styling
+@import './mixins';
+
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+//Animation
+@keyframes pulse_01 {
+  0% {
+    transform: scale(0.94);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 12px rgba(255, 255, 255, 0);
+  }
+  100% {
+    transform: scale(0.94);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes bounce_01 {
+  0%,
+  100% {
+    transform: translateY(-30px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+}
+
+.custom-navbar {
+  background-color: transparent;
+  padding: 1.5em;
+
+  .btn {
+    box-shadow: 0px 16px 32px rgba(174, 84, 94, 0.3);
+    font-weight: 600;
+  }
+
+  .navbar-nav {
+    .nav-item {
+      margin-right: 1.2em;
+      font-weight: 600;
+
+      .nav-link:hover {
+        color: white;
+      }
+    }
+  }
+}
+
+.jumbotron {
+  .btn {
+    box-shadow: 0px 12px 56px rgba(253, 221, 92, 0.75);
+    font-weight: 600;
+    font-size: 24px;
+    animation: pulse_01 2s ease infinite;
+
+    &:hover {
+      animation: none;
+      box-shadow: 0px 12px 56px rgba(253, 221, 92, 0.75);
+    }
+  }
+}
+
+.h1 {
+  font-size: 6em;
+}
+
+.game-container {
+  .section-title {
+    text-align: center;
+    font-weight: 800;
+    font-size: 3em;
+    padding-top: 40px;
+  }
+
+  .section-line {
+    width: 80px;
+    height: 2px;
+    background: black;
+    margin: 12px auto;
+    display: block;
+  }
+
+  .section-img {
+    animation: bounce_01 3s ease infinite;
+  }
+
+  .game-card {
+    margin: 24px auto;
+    border: none;
+    border-radius: 24px;
+    box-shadow: 0px 30px 56px rgba(165, 182, 181, 0.3);
+    padding: 12px;
+
+    .card-img-top {
+      border-radius: 16px;
+    }
+
+    .card-title {
+      font-weight: bold;
+    }
+
+    .btn {
+      border-radius: 12px;
+
+      &:hover {
+        box-shadow: 0px 16px 40px rgba(61, 70, 69, 0.3);
+      }
+    }
+  }
+}
+
+.blog-container {
+  .section-title {
+    text-align: center;
+    font-weight: 800;
+    font-size: 3em;
+    padding-top: 56px;
+    color: white;
+  }
+  .section-line {
+    width: 200px;
+    height: 2px;
+    background: white;
+    margin: 12px auto;
+    display: block;
+  }
+
+  .blog-card {
+    margin: 24px auto;
+    border: none;
+    border-radius: 24px;
+    box-shadow: 0px 30px 56px rgba(51, 55, 125, 0.3);
+    overflow: hidden;
+
+    .btn {
+      padding: 0;
+    }
+
+    .card-title {
+      font-weight: bold;
+    }
+  }
+}
+
+footer {
+  background-color: $primary;
+  padding: 4em 0em;
+
+  .footer-about {
+    a {
+      font-size: 56px;
+      color: white;
+      line-height: 64px;
+      text-decoration: none;
+    }
+
+    p {
+      margin-top: 24px;
+      color: white;
+      font-weight: 600;
+    }
+  }
+
+  .footer-item {
+    margin-left: 56px;
+
+    .footer-title {
+      font-weight: bold;
+      margin-bottom: 1.6em;
+      color: white;
+      font-size: 24px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0px;
+      font-size: 16px;
+      font-weight: 600;
+
+      li {
+        margin-bottom: 15px;
+        a {
+          color: rgba($color: #fff, $alpha: 0.7);
+
+          &:hover {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  margin: 24px;
+  box-shadow: 0px 30px 56px rgba(51, 55, 125, 0.3);
+  border-radius: 32px;
+}

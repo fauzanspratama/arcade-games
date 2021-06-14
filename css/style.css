@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito";
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+
+.container {
+    border-radius: 24px;
+    width: 90%;
+    margin: auto;
+    background: white;
+}
+
+.container .title {
+    background: #397;
+    color: white;
+    padding: 8px;
+    margin-bottom: 2px;
+}
+
+.container .footer {
+    background: white;
+    padding: 8px;
+    margin-top: 2px;
+}
+
+.container .menu {
+    width: 20%;
+    height: auto;
+    background: white;
+    padding: 0px;
+}
+
+.container .content {
+    width: 100%;
+    background: white;
+    padding: 16px;
+    margin-left:25%;
+    grid-gap: 32px;
+    padding: 16px;
+    box-sizing: border-box;
+    border-radius: 24px;
+}
+
+.box {
+    width: 150px;
+    background: #f5f5f5;
+    padding: 16px; 
+    border-radius: 16px;
+}
+
+table {
+    width: 100%;
+    border-style: none;
+}
+
+img {
+    width: 95%;
+    border-radius: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+input {
+    padding: 8px;
+    width: 80%;
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+select {
+    padding: 8px;
+    width: 200px;
+    margin-bottom: 8px;
+    margin-top: 4px;
+    font-size: 16px;
+}
+
+button {
+    width: 100px;
+    margin: 16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    font-size: 14px;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #397;
+    color: white;
+}
+button a{
+    color: white;
+    text-decoration: none;
+}
+
+button:hover {
+    transform: scale(0.96);
+}
+
+p {
+    margin-left: 12px;
+    font-weight: 600;
+    text-align: left;
+    font-size: 15px;
+    line-height: 24px;
+    color: #313335;
+}
+
+li {
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 16px;
+    width: 95%;
+    background: #397;
+    list-style: none;
+}
+
+li a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}
+
+li a:hover {
+    transform: scale(1.2);
+}
